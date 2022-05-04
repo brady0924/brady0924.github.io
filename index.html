@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "icon" href = "favicon.ico">
+        <style>
+            body {
+                background-color: rgb(198, 212, 156)
+            }
+            
+            h1 {
+                color: black;
+                font family:arial;
+            }
+
+            p {
+                color: greenyellow
+                font family:verdana
+            }
+
+            a:hover {
+                color: red;
+            }
+        </style>
+    </head>
+    <body onload=display_ct();>
+        <h1>黃禹博</h1>
+        <p>
+            畢業高中：<a href="https://www.nehs.hc.edu.tw/">
+            國立新竹科學園區實驗高級中等學校</a>.<br>
+            目前就讀系所：<a href="https://web.ee.ntu.edu.tw/">
+            電機工程學系</a>.<br>
+        </p>
+        <h2>興趣：</h2>
+        <p>
+            1.足球 → <a href="https://www.manutd.com/">
+            曼聯</a>.<br>
+            2.聽音樂 → <a href="https://www.youtube.com/channel/UCvpredjG93ifbCP1Y77JyFA/">
+            YOASOBI</a>.<br>
+            3.打電動 → <a href="https://moba.garena.tw/">
+            傳說對決</a>.<br>
+        </p>
+        <picture>
+            <img src="brady.jpg" alt="error" width="300" height="300">
+        </picture>
+        <audio controls autoplay loop>
+            <source src="dry flower.mp3" type="audio/mpeg">
+            你的瀏覽器不支援 audio tag!
+        </audio>
+        <script>function display_ct7() {
+            var x = new Date()
+        
+            var month=(x.getMonth() +1).toString();
+
+            var date=x.getDate().toString();
+            date=date.length==1 ? 0+date : date;
+
+            var hours = x.getHours( ).toString();
+            hours=hours.length==1? 0+hours : hours;
+            
+            var minutes=x.getMinutes().toString();
+            minutes=minutes.length==1 ? 0+minutes : minutes;
+            
+            var seconds=x.getSeconds().toString();
+            seconds=seconds.length==1 ? 0+seconds : seconds;
+
+            var x1=month + "-" + date + "-" + x.getFullYear(); 
+            x1 = x1 + " " +  hours + ":" +  minutes + ":" +  seconds;
+            document.getElementById('ct7').innerHTML = x1;
+            display_c7();
+            }
+            function display_c7(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct7()',refresh)
+            }
+            display_c7()
+        </script>
+        <span id='ct7'></span>
+    </body>
+</html>
